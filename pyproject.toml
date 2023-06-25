@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "python-summer-2023"
+version = "0.1.0"
+description = ""
+authors = ["olka"]
+readme = "README.md"
+packages = [{include = "python_summer_2023"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+sqlalchemy = "^2.0.17"
+pymysql = "^1.0.3"
+pandas = "^2.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
