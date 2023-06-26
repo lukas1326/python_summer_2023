@@ -82,7 +82,7 @@ print(de)
 words_list=['gsdjhffb','gsjhdbs','kkljsh','ooo','okl','osdfg']
 word_dict = defaultdict(list)
 
-
+# but it is not my solution (
 for word in words_list:
     if word:
         first_char = word[0]
