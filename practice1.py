@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy import text
 import pandas as pd
-from collections import namedtuple,Counter,deque
+from collections import namedtuple,Counter,deque,defaultdict
+from functools import reduce
 
 engine = create_engine("mysql+pymysql://root:@localhost/python2")
 
@@ -78,6 +79,16 @@ print(de)
 # 6)Create a defaultdict that maps a character to a list of words starting with that character.
 # Calculate the sum of values for each key in a dictionary using a defaultdict.
 
+words_list=['gsdjhffb','gsjhdbs','kkljsh','ooo','okl','osdfg']
+word_dict = defaultdict(list)
+
+
+for word in words_list:
+    if word:
+        first_char = word[0]
+        word_dict[first_char].append(word)
+print(word_dict)
+
 
 
 
@@ -87,3 +98,6 @@ print(de)
 
 # 7)Use reduce to find the maximum element in a list of numbers.
 # Combine a list of strings into a single string using reduce.
+n_list  =[2,5,44,6]
+print(reduce(lambda x, y: x if x > y else y,n_list))
+print(reduce(lambda x, y: x + y, words_list))
