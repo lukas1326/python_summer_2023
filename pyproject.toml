@@ -12,6 +12,9 @@ requests = "^2.31.0"
 sqlalchemy = "^2.0.17"
 pymysql = "^1.0.3"
 pandas = "^2.0.2"
+ipykernel = "^6.25.1"
+pymongo = "^4.4.1"
+redis = "^5.0.0"
 
 
 [build-system]
